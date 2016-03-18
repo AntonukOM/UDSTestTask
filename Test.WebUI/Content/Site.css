@@ -16,3 +16,12 @@ textarea {
     max-width: 450px;
 }
 
+.wraper-content {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.important {
+    font-weight: bold;
+}
+

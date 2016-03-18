@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace Test.WebUI.Models
@@ -6,6 +7,7 @@ namespace Test.WebUI.Models
     public class UserModel
     {
         public string Guid { get; set; }
+        public string Picture { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
         public string Company { get; set; }

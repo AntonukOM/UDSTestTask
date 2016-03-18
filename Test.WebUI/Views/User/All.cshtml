@@ -10,11 +10,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     List<UserModel> users = ViewBag.Users;
 }
-<div class="col-md-offset-11">
-    <form class="form-horizontal" method="post" action="/Login/LogOut">
-        <input type="submit" value="Logout" class="btn btn-default" />
-    </form>
-</div>
+@Html.Partial("LogOutPartial")
 
 <h3 class="text-success lead">User Name: @ViewBag.UserName</h3>
 <table class="table table-hover table-bordered">

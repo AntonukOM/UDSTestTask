@@ -25,6 +25,7 @@ namespace Test.WebUI.Controllers
         [HttpGet]
         public ActionResult Detail(string id)
         {
+            ViewBag.UserName = Session["Name"];
             var user = _userRepository.GetUserByGuid(id);
             return View(user);
         }

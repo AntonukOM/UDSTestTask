@@ -7,11 +7,29 @@
     UserModel user = Model;
 }
 
-<h2>Detail</h2>
-<p>@user.Name</p>
-<p>@user.Gender</p>
-<p>@user.Phone</p>
-<p>@user.Email</p>
-<p>@user.Company</p>
+@Html.Partial("LogOutPartial")
 
-
+<div class="container">
+    <h2 class="lead text-primary">User name: @ViewBag.UserName</h2>
+    <div class="row">
+        <div class="col-md-2 col-sm-3 col-xs-4">
+            <img src="@user.Picture" width="140" height="190" alt="User picture" class="img-rounded" />
+        </div>
+        <div class="col-md-10 col-sm-9 col-xs-8">
+            <p class="lead">@user.Name, @user.Gender</p>
+            <p>@user.Company</p>
+            <p>@user.Email</p>
+            <p>@user.Phone</p>
+            <p>@user.Address</p>
+            <p><span class="important">Registered:</span> @user.Registered.ToShortDateString() at @user.Registered.ToShortTimeString()</p>
+        </div>
+    </div>
+    <div class="row wraper-content">
+        <div class="col-md-12">
+            <div class="text-justify">
+                <span>@user.About</span>
+            </div>
+        </div>
+    </div>
+    <div class="row text-right"><a href="/User/All">Back</a></div>
+</div>
