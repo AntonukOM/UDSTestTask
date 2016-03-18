@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Test.WebUI.Helpers.Managers;
 using Test.WebUI.Models;
 
@@ -33,6 +29,7 @@ namespace Test.WebUI.Controllers
             {                
                 if (_loginManager.Login(loginModel.Login, loginModel.Password, loginModel.Name))
                 {
+                    Session["Name"] = loginModel.Name;
                     return RedirectToAction("All", "User");
                 }
                 else
@@ -47,7 +44,7 @@ namespace Test.WebUI.Controllers
         public ActionResult LogOut()
         {
             _loginManager.Logout();
-            return View();
+            return RedirectToAction("SingIn");
         }
     }
 }

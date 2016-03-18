@@ -16,7 +16,7 @@ namespace Test.WebUI
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Login", action = "SingIn", id = UrlParameter.Optional }
+                defaults: new { controller = "User", action = "All", id = UrlParameter.Optional }
             );
         }
     }

@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Test.WebUI.Models
 {
-    public class LoginModelRepository : IUserRepository
+    public class LoginModelRepository : ILoginRepository
     {
         private readonly List<LoginModel> _logins;
         public LoginModelRepository()

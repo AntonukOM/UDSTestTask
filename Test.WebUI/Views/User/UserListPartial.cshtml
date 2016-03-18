@@ -1,0 +1,31 @@
+﻿@using Test.WebUI.Models
+@model List<UserModel>
+
+@section scripts
+{
+    <script src="~/Scripts/pages/users.js"></script>
+}
+
+@{
+    List<UserModel> users = Model;
+}
+
+@foreach (var u in users)
+{
+    <tr>
+        <td><a href="/User/Detail/@u.Guid"> @u.Name</a></td>
+        <td>@u.Company</td>
+        <td>@u.Email</td>
+        <td>@u.Phone</td>
+        <td>
+            <form method="get" action="/User/FilterByTag">
+                @foreach (var t in u.Tags)
+                {
+                    <button type="button" value="@t"
+                            name="filter" class="btn-link tag">@t</button>
+                }
+            </form>
+
+        </td>
+    </tr>
+}

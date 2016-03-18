@@ -1,10 +1,33 @@
-﻿
+﻿@using Test.WebUI.Models
+
+@section scripts
+{
+    <script src="~/Scripts/pages/users.js"></script>
+}
+
 @{
     ViewBag.Title = "All";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    List<UserModel> users = ViewBag.Users;
 }
+<div class="col-md-offset-11">
+    <form class="form-horizontal" method="post" action="/Login/LogOut">
+        <input type="submit" value="Logout" class="btn btn-default" />
+    </form>
+</div>
 
-<h2>All</h2>
-
-<h3>From The User Side</h3>
-
+<h3 class="text-success lead">User Name: @ViewBag.UserName</h3>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Email</th>
+            <th style="width:150px">Phone</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody id="list">
+       @Html.Partial("UserListPartial", users)
+    </tbody>
+</table>

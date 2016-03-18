@@ -7,7 +7,8 @@
     LoginModel login = Model;
 }
 
-<form class="form-horizontal" method="post" action="/Login/SingIn">
+<h3 class="lead text-info text-center">Enter your credentials here:</h3>
+<form class="form-horizontal col-md-offset-2" method="post" action="/Login/SingIn">
     <div class="form-group">
         @Html.LabelFor(n => n.Name, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -28,7 +29,7 @@
     </div>        
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-success">Go</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </div>
     <div class="form-group">

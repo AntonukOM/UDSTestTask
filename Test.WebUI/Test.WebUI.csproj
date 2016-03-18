@@ -104,6 +104,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\pages\users.js" />
     <Content Include="Web.config" />
     <Content Include="Views\User\All.cshtml" />
   </ItemGroup>
@@ -116,9 +117,12 @@
     </Compile>
     <Compile Include="Helpers\Managers\FormsSecurityManager.cs" />
     <Compile Include="Helpers\Managers\ISecurityManager.cs" />
+    <Compile Include="Interfaces\ILoginRepository.cs" />
     <Compile Include="Interfaces\IUserRepository.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\LoginModelRepository.cs" />
+    <Compile Include="Models\UserModel.cs" />
+    <Compile Include="Models\UserModelRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +137,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\User\Detail.cshtml" />
+    <Content Include="Views\User\UserListPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

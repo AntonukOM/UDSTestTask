@@ -1,7 +1,16 @@
-﻿namespace Test.WebUI.Interfaces
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Test.WebUI.Models;
+
+namespace Test.WebUI.Interfaces
 {
     public interface IUserRepository
     {
-        bool Login(string login, string password, string name);
+        List<UserModel> GetUsers();
+        UserModel GetUserByGuid(string guid);
+        List<UserModel> FilterByTag(string tag);
     }
 }
